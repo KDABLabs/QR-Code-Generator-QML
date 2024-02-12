@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>QRCode.qml</file>
+        <file>jquery.min.js</file>
+        <file>qrcode.min.js</file>
+        <file>qr-loader.html</file>
+    </qresource>
+</RCC>

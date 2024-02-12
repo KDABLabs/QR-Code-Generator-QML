@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+#qr {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+</style>
+</head>
+<body>
+<div id="q"></div>
+<script src="jquery.min.js"></script>
+<script src="qrcode.min.js"></script>
+<script>
+function generateQRCode() {
+  const s = new URLSearchParams(document.location.search);
+  const w = Number(s.get("w"));
+  const t = atob(s.get("t"));
+  new QRCode(document.getElementById("q"), {
+    text: t,
+    width: w,
+    height: w
+  });
+}
+generateQRCode();
+</script>
+</body>
